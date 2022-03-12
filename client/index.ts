@@ -48,7 +48,7 @@ export default class ExtendedClient extends Client {
 
                 require(`../functions/${file}`)(this);
             })
-            mongoose.connect("mongodb://127.0.0.1:27017/dyn0").then(() => console.log("Connected to db")).catch(e => console.log(String(e)));
+            mongoose.connect(`${process.env.mongoUrl}`).then(() => console.log("Connected to db")).catch(e => console.log(String(e)));
         })
     }
 }
