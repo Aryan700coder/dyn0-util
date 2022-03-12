@@ -1,0 +1,3 @@
+Use !tag <tag name>
+ping
+kick
